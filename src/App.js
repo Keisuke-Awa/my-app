@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ToDoInput from './ToDoInput'
+import ToDoList from './ToDoList'
 import logo from './logo.svg';
 import './App.css';
 
