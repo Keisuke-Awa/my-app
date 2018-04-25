@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import ToDoInput from './ToDoInput'
-import ToDoList from './ToDoList'
+import TodoInput from './ToDoInput'
+import TodoList from './ToDoList'
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
+    const tasks = [
+      { title: 'ToDo1つ目', id: 0 },
+      { title: 'ToDo2つ目', id: 1 },
+    ];
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Hello World</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>TODO App</h1>
+        <TodoInput />
+        <TodoList tasks={tasks} />
       </div>
     );
   }
